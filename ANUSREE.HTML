@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anusree Collections | Handmade Silk Thread Bangles & Boutique</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --emerald: #0a362c;
+      --maroon: #5c1424;
+      --gold: #d4af37;
+      --cream: #fdf8f0;
+      --text: #222222;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--cream);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, var(--emerald), var(--maroon));
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+      border-bottom: 4px solid var(--gold);
+    }
+    header h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.3rem;
+      color: var(--gold);
+      letter-spacing: 2px;
+    }
+    header p {
+      margin-top: 8px;
+      font-size: 0.95rem;
+      letter-spacing: 1px;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 35px 20px;
+    }
+    .section-title {
+      font-family: 'Cinzel', serif;
+      text-align: center;
+      color: var(--emerald);
+      font-size: 1.7rem;
+      margin-bottom: 24px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #e6dcc8;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      display: flex;
+      flex-direction: column;
+    }
+    .img-box {
+      position: relative;
+      height: 260px;
+      background: #f3ead8;
+    }
+    .img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .price-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: var(--maroon);
+      color: var(--gold);
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border: 1px solid var(--gold);
+    }
+    .card-body {
+      padding: 16px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card-body h3 {
+      color: var(--maroon);
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+    }
+    .card-body p {
+      font-size: 0.85rem;
+      color: #555;
+      margin-bottom: 14px;
+    }
+    .btn-wa {
+      display: block;
+      text-align: center;
+      background: #1f7a4c;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+    .btn-wa:hover {
+      background: #165b38;
+    }
+    footer {
+      background: var(--emerald);
+      color: #fff;
+      text-align: center;
+      padding: 35px 20px;
+      margin-top: 50px;
+      border-top: 4px solid var(--gold);
+    }
+    footer a {
+      color: var(--gold);
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 0.92rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ANUSREE COLLECTIONS</h1>
+    <p>HANDMADE SILK THREAD BANGLES • JHUMKAS • LADIES BOUTIQUE</p>
+  </header>
+
+  <div class="container">
+    <h2 class="section-title">Our Collections</h2>
+    <div class="grid" id="product-grid"></div>
+  </div>
+
+  <footer>
+    <p style="font-family:'Cinzel',serif; font-size:1.2rem; color:var(--gold); margin-bottom:10px;">ANUSREE COLLECTIONS</p>
+    <p>
+      <a href="https://wa.me/919281119117" target="_blank">📞 +91 9281119117</a> |
+      <a href="https://instagram.com/anu_sree_collections" target="_blank">📸 @anu_sree_collections</a> |
+      <a href="mailto:maddineniudayasree@gmail.com">✉️ maddineniudayasree@gmail.com</a>
+    </p>
+  </footer>
+
+  <script>
+    // MEE WHATSAPP NUMBER
+    const phone = "919281119117";
+
+    // ============================================================
+    // IKKADA MEE PHOTOS, PRICES & ITEMS DIRECT GA EDIT CHEYANDI
+    // ============================================================
+    const products = [
+      {
+        photo: "Photo1.jpg",
+        price: "₹799",
+        name: "Rani Pink & Teal Bridal Kundan Set",
+        desc: "Custom handmade silk thread bridal bangle set with leaf kundans."
+      },
+      {
+        photo: "Photo2.jpg",
+        price: "₹120",
+        name: "Orange Triangle-Kundan Bangles",
+        desc: "Festive orange silk thread bangles with golden triangle stones."
+      },
+      {
+        photo: "Photo3.jpg",
+        price: "₹349",
+        name: "Classic 8-Piece Rani Pink Bangles",
+        desc: "8 bangles set with gold-rimmed stones for festive & daily wear."
+      },
+      {
+        photo: "Photo4.jpg",
+        price: "₹199",
+        name: "Antique Silver Lakshmi Jhumkas",
+        desc: "Oxidized silver temple jhumkas with delicate pearl drops."
+      },
+      {
+        photo: "Photo5.jpg",
+        price: "₹220",
+        name: "Antique Gold Temple Jhumkas",
+        desc: "Traditional matte-gold Lakshmi motif jhumkas."
+      },
+      {
+        photo: "Photo6.jpg",
+        price: "₹60",
+        name: "Handmade Organza & Satin Scrunchies",
+        desc: "Soft hair scrunchies available in pastel & festive colors."
+      },
+      {
+        photo: "Photo7.jpg",
+        price: "₹249",
+        name: "Purple Square & Circle Kundan Bangles",
+        desc: "Rich purple silk thread bangles embellished with mirror-cut square and round kundans."
+      },
+      {
+        photo: "Photo8.jpg",
+        price: "₹279",
+        name: "Purple Diamond-Kundan Bangles (Pair)",
+        desc: "Handcrafted purple silk thread pair with geometric diamond-shaped kundans."
+      },
+      {
+        photo: "Photo9.jpg",
+        price: "₹349",
+        name: "Purple Floral & Diamond Kundan Bridal Set",
+        desc: "Heavy festive purple silk thread set featuring floral kundan centers and diamond borders."
+      },
+      {
+        photo: "Photo10.jpg",
+        price: "₹499",
+        name: "Haldi Yellow Full-Stone Bridal Bangles",
+        desc: "Bright haldi-yellow silk thread bangles loaded with sparkling white kundans."
+      },
+      {
+        photo: "Photo11.jpg",
+        price: "₹220",
+        name: "Magenta Pink 8-Piece Rectangular Stone Set",
+        desc: "8-piece magenta pink silk thread bangles accented with gold-rimmed rectangular stones."
+      },
+      {
+        photo: "Photo12.jpg",
+        price: "₹649",
+        name: "Magenta Pink & Yellow Bridal Combo Set",
+        desc: "Complete two-hand bridal bangle combo pairing magenta pink threads with heavy yellow kundan bangles."
+      }
+
+    ];
+
+    // WEBSITE LO AUTOMATIC GA CARDS CREATE AYYE CODE (DEENINI MARCHAKANDI)
+    const grid = document.getElementById("product-grid");
+
+    products.forEach(item => {
+      const msg = encodeURIComponent(`Hi Anusree Collections! I want to order:\n• Item: ${item.name}\n• Price: ${item.price}`);
+      grid.innerHTML += `
+        <div class="card">
+          <div class="img-box">
+            <span class="price-badge">${item.price}</span>
+            <img src="${item.photo}" alt="${item.name}">
+          </div>
+          <div class="card-body">
+            <div>
+              <h3>${item.name}</h3>
+              <p>${item.desc}</p>
+            </div>
+            <a class="btn-wa" href="https://wa.me/${phone}?text=${msg}" target="_blank">Order on WhatsApp</a>
+          </div>
+        </div>
+      `;
+    });
+  </script>
+
+</body>
+</html>
